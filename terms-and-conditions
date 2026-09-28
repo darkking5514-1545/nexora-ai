@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Terms and Conditions for Nexora AI, an on-device AI chat app by RH Studio PK.">
+<title>Nexora AI — Terms and Conditions</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --text: #1c1e21;
+    --text-muted: #5a6068;
+    --heading: #14161a;
+    --accent: #4a6cf7;
+    --accent-soft: #eef1fe;
+    --border: #e4e6eb;
+    --nav-bg: rgba(255, 255, 255, 0.9);
+    --code-bg: #f1f2f5;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --surface: #1c1f24;
+      --text: #e6e8eb;
+      --text-muted: #a2a8b0;
+      --heading: #f4f5f7;
+      --accent: #7c95ff;
+      --accent-soft: #232748;
+      --border: #2d3138;
+      --nav-bg: rgba(20, 22, 26, 0.92);
+      --code-bg: #24272d;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--nav-bg);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .brand { font-weight: 700; font-size: 1.05rem; color: var(--heading); }
+  .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 7px 14px;
+    border-radius: 8px;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .nav-links a:hover, .nav-links a.active { background: var(--accent-soft); color: var(--accent); }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 32px 20px 80px; }
+  header.page-header {
+    padding: 28px 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    margin-bottom: 24px;
+  }
+  header.page-header h1 { margin: 0 0 6px; font-size: 1.7rem; color: var(--heading); }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin-top: 14px;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+  }
+  .meta-row strong { color: var(--text); }
+  .badge {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-top: 10px;
+  }
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .toc h2 { margin: 0 0 10px; font-size: 1.05rem; color: var(--heading); }
+  .toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 24px; }
+  .toc li { margin: 4px 0; break-inside: avoid; }
+  .toc a { color: var(--accent); text-decoration: none; font-size: 0.92rem; }
+  .toc a:hover { text-decoration: underline; }
+  section.doc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 8px 28px 28px;
+    margin-bottom: 28px;
+  }
+  h3 { font-size: 1.08rem; color: var(--heading); margin: 28px 0 8px; scroll-margin-top: 80px; }
+  h3:first-of-type { margin-top: 22px; }
+  p { color: var(--text); margin: 10px 0; }
+  ul { margin: 10px 0; padding-left: 22px; }
+  li { margin: 6px 0; }
+  a.inline-link { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+  a.inline-link:hover { border-bottom-color: var(--accent); }
+  code.pkg { background: var(--code-bg); padding: 2px 6px; border-radius: 5px; font-size: 0.88em; }
+  .cross-link {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .cross-link span { color: var(--accent); }
+  .cross-link:hover { border-color: var(--accent); }
+  footer.site-footer {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 24px 20px 10px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    border-top: 1px solid var(--border);
+  }
+  footer.site-footer p { margin: 4px 0; }
+  footer.site-footer a { color: var(--accent); text-decoration: none; }
+  @media (max-width: 480px) {
+    header.page-header h1 { font-size: 1.4rem; }
+    section.doc { padding: 4px 18px 18px; }
+    .toc ol { columns: 1; }
+    .nav-inner { justify-content: center; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="nav-inner">
+    <div class="brand">Nexora AI</div>
+    <div class="nav-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-and-conditions.html" class="active">Terms &amp; Conditions</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="page-header">
+    <h1>Nexora AI — Terms and Conditions</h1>
+    <div class="meta-row">
+      <span><strong>App:</strong> Nexora AI</span>
+      <span><strong>Package:</strong> <code class="pkg">com.rhstudio.nexora</code></span>
+      <span><strong>Developer:</strong> RH Studio PK</span>
+      <span><strong>Country:</strong> Pakistan</span>
+    </div>
+    <div class="badge">Last Updated: September 28, 2026</div>
+  </header>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#service">Description of the Service</a></li>
+      <li><a href="#eligibility">Eligibility</a></li>
+      <li><a href="#license">License to Use the App</a></li>
+      <li><a href="#responsibilities">User Responsibilities &amp; Acceptable Use</a></li>
+      <li><a href="#ai-disclaimer">AI-Generated Content Disclaimer</a></li>
+      <li><a href="#third-party-models">Third-Party AI Models &amp; Licenses</a></li>
+      <li><a href="#advertising">Advertising &amp; Rewarded Ads</a></li>
+      <li><a href="#ip">Intellectual Property</a></li>
+      <li><a href="#warranty">No Warranty</a></li>
+      <li><a href="#liability">Limitation of Liability</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#changes">Changes to the Terms</a></li>
+      <li><a href="#law">Governing Law</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <section class="doc">
+
+    <h3 id="acceptance">1. Acceptance of Terms</h3>
+    <p>
+      These Terms and Conditions ("Terms") govern your use of the Nexora AI Android application (the "App"),
+      provided by RH Studio PK ("we," "us," or "our"). By downloading, installing, or using the App, you agree to be
+      bound by these Terms. If you do not agree, please do not use the App.
+    </p>
+
+    <h3 id="service">2. Description of the Service</h3>
+    <p>
+      Nexora AI is a chat application that allows you to run AI language models (in GGUF format) locally on your
+      Android device. Prompts and responses are processed on-device, and no account or login is required to use the
+      App.
+    </p>
+
+    <h3 id="eligibility">3. Eligibility</h3>
+    <p>
+      The App is not directed to children under the age of 13. By using the App, you represent that you meet the
+      minimum age required by the laws of your jurisdiction to use apps of this nature without parental consent, or
+      that you have obtained such consent.
+    </p>
+
+    <h3 id="license">4. License to Use the App</h3>
+    <p>
+      Subject to your compliance with these Terms, RH Studio PK grants you a limited, non-exclusive,
+      non-transferable, revocable license to install and use the App on a compatible Android device for your
+      personal, non-commercial use.
+    </p>
+
+    <h3 id="responsibilities">5. User Responsibilities and Acceptable Use</h3>
+    <p>You agree that you will not:</p>
+    <ul>
+      <li>Use the App for any unlawful purpose or in violation of any applicable law or regulation</li>
+      <li>Attempt to reverse-engineer, decompile, or tamper with the App beyond what is permitted by law</li>
+      <li>Use the App to generate or distribute content that is illegal, harmful, or infringes on others' rights</li>
+      <li>Interfere with the App's advertising mechanisms in an abusive or fraudulent manner</li>
+    </ul>
+
+    <h3 id="ai-disclaimer">6. AI-Generated Content Disclaimer</h3>
+    <p>
+      Nexora AI generates responses using AI language models running locally on your device. AI-generated content
+      may be inaccurate, incomplete, outdated, or offensive. You must not rely on any response from the App for
+      medical, legal, financial, or safety-related decisions. You are solely responsible for evaluating and
+      verifying any AI-generated content before acting on it.
+    </p>
+
+    <h3 id="third-party-models">7. Third-Party AI Models and Licenses</h3>
+    <p>
+      You may load your own AI model files (in GGUF format) into the App. Such models are typically created and
+      distributed by third parties and may be subject to their own licenses and usage restrictions. You are solely
+      responsible for ensuring that any model you load and use complies with its applicable license terms. We are
+      not responsible for the content, behavior, or licensing of any third-party model you choose to use.
+    </p>
+
+    <h3 id="advertising">8. Advertising and Rewarded Ads</h3>
+    <p>
+      The App displays ads through Google AdMob, including a rewarded ad that you may choose to watch (via the
+      "Watch Ad to Continue Chat" option) to continue chatting after reaching a message limit, and a banner ad shown
+      in the sidebar menu. Ad content is provided by Google and its advertising partners, and we are not responsible
+      for the content of any third-party advertisements.
+    </p>
+
+    <h3 id="ip">9. Intellectual Property</h3>
+    <p>
+      The App, including its name, design, branding, and underlying code, is the property of RH Studio PK and is
+      protected by applicable intellectual property laws. You may not copy, modify, distribute, reverse-engineer, or
+      create derivative works from the App without our prior written permission. This does not affect your ownership
+      or rights over any third-party AI model files you separately obtain and load into the App.
+    </p>
+
+    <h3 id="warranty">10. No Warranty</h3>
+    <p>
+      The App is provided "as is" and "as available," without warranties of any kind, whether express or implied,
+      including but not limited to warranties of merchantability, fitness for a particular purpose, or
+      non-infringement. We do not guarantee that the App, or any AI model run within it, will be accurate,
+      error-free, or uninterrupted.
+    </p>
+
+    <h3 id="liability">11. Limitation of Liability</h3>
+    <p>
+      To the fullest extent permitted by law, RH Studio PK shall not be liable for any indirect, incidental,
+      special, or consequential damages, including but not limited to loss of data, loss of chats, or damages
+      arising from reliance on AI-generated content, arising out of or related to your use of, or inability to use,
+      the App.
+    </p>
+
+    <h3 id="termination">12. Termination</h3>
+    <p>
+      You may stop using the App at any time by uninstalling it from your device. We reserve the right to modify,
+      suspend, or discontinue the App, in whole or in part, at any time without prior notice.
+    </p>
+
+    <h3 id="changes">13. Changes to the Terms</h3>
+    <p>
+      We may revise these Terms from time to time. Any updates will be reflected by an updated "Last Updated" date
+      at the top of this page. Continued use of the App after any changes constitutes your acceptance of the revised
+      Terms.
+    </p>
+
+    <h3 id="law">14. Governing Law</h3>
+    <p>
+      These Terms shall be governed by and construed in accordance with the laws of Pakistan, without regard to its
+      conflict of law principles.
+    </p>
+
+    <h3 id="contact">15. Contact Us</h3>
+    <p>If you have any questions about these Terms, please contact us:</p>
+    <ul>
+      <li><strong>Developer:</strong> RH Studio PK</li>
+      <li><strong>Email:</strong> <a class="inline-link" href="mailto:riderhunter301@gmail.com">riderhunter301@gmail.com</a></li>
+      <li><strong>Website:</strong> <a class="inline-link" href="https://rhstudio.rf.gd" target="_blank" rel="noopener noreferrer">rhstudio.rf.gd</a></li>
+      <li><strong>Country:</strong> Pakistan</li>
+    </ul>
+  </section>
+
+  <a class="cross-link" href="privacy-policy.html">Looking for the <span>Privacy Policy</span>? Click here →</a>
+
+</div>
+
+<footer class="site-footer">
+  <p>© 2026 RH Studio PK. All rights reserved.</p>
+  <p>
+    <a href="mailto:riderhunter301@gmail.com">riderhunter301@gmail.com</a>
+    &nbsp;·&nbsp;
+    <a href="https://rhstudio.rf.gd" target="_blank" rel="noopener noreferrer">rhstudio.rf.gd</a>
+  </p>
+</footer>
+
+</body>
+</html>
